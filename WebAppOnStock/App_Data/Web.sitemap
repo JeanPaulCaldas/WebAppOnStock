@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode title="Home" description="Home" url="default.aspx">
+    <siteMapNode title="General" description="Generalidades" url="">
+      <siteMapNode title="Usuarios" description="Usuarios" url="usuarios.aspx"></siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Ventas" description="Ventas" url="">
+      <siteMapNode title="Ventas" description="Ventas" url="ventas.aspx"></siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Compras" description="Compras" url="">
+      <siteMapNode title="Compras" description="Compras" url="compras.aspx"></siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Inventario" description="Inventario" url="">
+      <siteMapNode title="Nuevo Producto" description="Nuevo Producto" url="nuevoProducto.aspx"></siteMapNode>
+      <siteMapNode title="Listado de Productos" description="Listado de Productos" url="listaProductos.aspx"></siteMapNode>
+      <siteMapNode title="Stock Actual" description="Stock Actual" url="stockActual.aspx"></siteMapNode>
+      <siteMapNode title="Historial Movimientos" description="Historial Movimientos" url="historialMovimientos.aspx"></siteMapNode>
+      <siteMapNode title="Ajustes a Stock" description="Ajustes a Stock" url="ajustesStock.aspx"></siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Reportes" description="Reportes" url="">
+      <siteMapNode title="Ventas" description="Ventas" url="">
+        <siteMapNode title="Ventas por Producto" description="Ventas por Producto" url="reporteVentasProducto.aspx"></siteMapNode>
+        <siteMapNode title="Beneficios de Ventas" description="Beneficios de Ventas" url="beneficiosVentas.aspx"></siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="Compras" description="Compras" url="">
+        <siteMapNode title="Compras por Proveedor" description="Compras por Proveedor" url="comprasProveedor.aspx"></siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="Inventario" description="Inventario" url="">
+        <siteMapNode title="Inventario por Locación" description="Inventario por Locación" url="inventarioLocacion.aspx"></siteMapNode>
+        <siteMapNode title="Inventario Total" description="Inventario Total" url="inventarioTotal.aspx"></siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

@@ -4,22 +4,99 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>On Stock</title>
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <%--<script src="Scripts/jquery-3.0.0.intellisense.js"></script>--%>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <%--<form id="form1" runat="server">--%>
+    <script type="text/javascript">
+        /*jQuery time*/
+        $(document).ready(function () {
+            $("#accordian h3").click(function () {
+                //slide up all the link lists
+                $("#accordian ul ul").slideUp();
+                //Re-asigna la clase active
+                $(this).parent().siblings(".active").removeClass("active");
+                $(this).parent().addClass("active");
+                //slide down the link list below the h3 clicked - only if its closed
+                if ($(this).parent().hasClass("active")) {
+                    //console.log($(this).parent().siblings(".active"));
+                    $(this).next().slideDown();
+                }
+            })
+        })
+    </script>
+    <header class="main-header">
         <div>
-            <h1>Master Page...</h1>
+            <a href="default.aspx">
+                <img alt="logo" class="logo" runat="server" src="~/Images/OnStock_BlueLogo.png" />
+            </a>
         </div>
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
-    </div>
-    <%--</form>--%>
-    <div>
-        <h1>Master Page Footer</h1>
-    </div>
+    </header>
+    <form id="form1" runat="server">
+        <div class="container_Master">
+            <div id="accordian">
+                <ul>
+                    <li class="active">
+                        <h3><span class="icon-dashboard"></span>General</h3>
+                        <ul>
+                            <li><a href="#">Usuarios</a></li>
+                        </ul>
+                    </li>
+                    <!-- we will keep this LI open by default -->
+                    <li>
+                        <h3><span class="icon-tasks"></span>Inventario</h3>
+                        <ul>
+                            <li><a href="#">Nuevo Producto</a></li>
+                            <li><a href="#">Listado de Productos</a></li>
+                            <li><a href="#">Stock Actual</a></li>
+                            <li><a href="#">Historial Movimientos</a></li>
+                            <li><a href="#">Ajustes a Stock</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><span class="icon-calendar"></span>Ventas</h3>
+                        <ul>
+                            <li><a href="#">Nueva Orden de Venta</a></li>
+                            <li><a href="#">Consultar Ventas</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><span class="icon-heart"></span>Compras</h3>
+                        <ul>
+                            <li><a href="#">Registrar Compra</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><span class="icon-heart"></span>Reportes</h3>
+                        <ul>
+                            <li><a href="#">Ventas por Producto</a></li>
+                            <li><a href="#">Beneficios de Ventas</a></li>
+                            <li><a href="#">Compras por Proveedor</a></li>
+                            <li><a href="#">Inventario por Locación</a></li>
+                            <li><a href="#">Inventario Total</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <%--<div>
+                <asp:Menu ID="MenuMaster" runat="server" CssClass="main-nav"></asp:Menu>
+            </div>--%>
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+    </form>
+    <footer class="main-footer">
+        <span>2016 &copy; OnStock WebApp.</span>
+    </footer>
+
 </body>
 </html>

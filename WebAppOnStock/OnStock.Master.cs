@@ -11,7 +11,23 @@ namespace WebAppOnStock
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //MenuMaster.DataSource = GetSiteMapDataSource();
+            //MenuMaster.DataBind();
+        }
 
+        private SiteMapDataSource GetSiteMapDataSource()
+        {
+            XmlSiteMapProvider xmlSiteMap = new XmlSiteMapProvider();
+            System.Collections.Specialized.NameValueCollection
+                   myCollection = new
+                   System.Collections.Specialized.NameValueCollection(1);
+            myCollection.Add("siteMapFile", "App_Data/Web.sitemap");
+            xmlSiteMap.Initialize("provider", myCollection);
+            xmlSiteMap.BuildSiteMap();
+            SiteMapDataSource siteMap = new SiteMapDataSource();
+            siteMap.Provider = xmlSiteMap;
+            siteMap.ShowStartingNode = false;
+            return siteMap;
         }
     }
 }

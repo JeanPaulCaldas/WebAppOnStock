@@ -1,0 +1,371 @@
+/* ================================= 
+  Base Element Styles
+
+    http://thecodeplayer.com/walkthrough/vertical-accordion-menu-using-jquery-css3
+    http://cssmenumaker.com/menu/slabbed-accordion-menu
+    http://keenthemes.com/preview/metronic/
+==================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+    color: #3a3a3a;
+}
+
+p {
+    font-size: .95em;
+    margin-bottom: 1.8em;
+}
+
+h2,
+/*h3,*/
+a {
+    color: #093a58;
+}
+
+h2,
+h3,
+h4 {
+    margin-top: 0;
+}
+
+h4 {
+    margin-bottom: .4em;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 0;
+    line-height: 0;
+    position: relative;
+}
+
+figcaption {
+    font-size: .9em;
+    line-height: 1.5;
+    color: #fff;
+    padding: 1em;
+    background: rgba(19,43,102, .85);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.contact {
+    margin: 0 16px;
+    padding: 2em;
+    background: #f4f7f8;
+    border-radius: 8px;
+}
+
+    .contact h2 {
+        text-align: center;
+    }
+
+fieldset {
+    margin-bottom: 10px;
+    border: none;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    /*font-size: 16px;*/
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    /*margin-bottom: 30px;*/
+}
+
+input[type="submit"] {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #26c281;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 10px;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+    font-size: 1.25em;
+    margin: 0;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 325px;
+}
+
+.container_Master {
+    display: flex;
+    flex-direction: row;
+}
+
+.name {
+    flex-direction: row;
+}
+
+    .name a,
+    .main-nav a {
+        display: block;
+        text-align: center;
+        padding: 10px 15px;
+    }
+
+.main-nav a {
+    font-size: .95em;
+    color: #3acec2;
+    text-transform: uppercase;
+}
+
+    .main-nav a:hover {
+        color: #093a58;
+    }
+
+/* ---- Menu ---- */
+
+#accordian {
+    background: #364150;
+    width: 250px;
+    color: #b4bcc8;
+    padding-top: 2em;
+}
+    /*heading styles*/
+    #accordian h3 {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 34px;
+        padding: 1em 10px;
+        cursor: pointer;
+        background: #364150;
+        text-transform: uppercase;
+        color: #b4bcc8;
+        margin: 0;
+    }
+        /*heading hover effect*/
+        #accordian h3:hover {
+            background-color: #2b3643;
+        }
+        /*iconfont styles*/
+        #accordian h3 span {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+    /*list items*/
+    #accordian li {
+        list-style-type: none;
+    }
+
+    /*links*/
+    #accordian ul ul li a {
+        color: #b4bcc8;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 27px;
+        display: block;
+        padding: .3em 2.5em;
+        /*transition for smooth hover animation*/
+        transition: all 0.15s;
+    }
+        /*hover effect on links*/
+        #accordian ul ul li a:hover {
+            background-color: #3e4b5c;
+            color: #fff;
+            border-left: 5px solid lightgreen;
+        }
+    /*Lets hide the non active LIs by default*/
+    #accordian ul ul {
+        display: none;
+    }
+
+    #accordian li.active h3 {
+        /*Hover Azul*/
+        background-color: #36c6d3;
+        /*Hover Verde*/
+        /*background-color:#26c281;*/
+        color: #fff;
+    }
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+    padding: .5em 1em;
+    background-color: #2b3643;
+    box-shadow: 0px 1px 12px 1px rgba(0,0,0,0.6);
+}
+
+.banner,
+.main-footer,
+.unorder {
+    text-align: center;
+}
+
+.banner {
+    color: #fff;
+    background: #3acec2;
+    padding: 3.2em 0;
+    margin-bottom: 60px;
+}
+
+.col {
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.main-footer {
+    /*Dark Footer*/
+    /*background: #2b3643;
+    color:#b4bcc8;*/
+    padding: .3em 0;
+    /*Green Footer*/
+    background-color: #36c6d3;
+    color: #fff;
+}
+
+/* ---- Page Elements ---- */
+
+.logo {
+    width: 200px;
+}
+
+.headline {
+    margin-bottom: 0;
+}
+
+.icon-location {
+    width: 35px;
+    position: absolute;
+    top: -15px;
+    right: -17px;
+}
+
+.feat-img {
+    border-radius: 5px;
+}
+
+.unorder img {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.unorder li {
+    padding-bottom: 20px;
+}
+
+.row {
+    align-items: flex-start;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+
+    .main-header,
+    .row {
+        /*width: 90%;*/
+        margin: 0 auto;
+    }
+
+    .tagline {
+        font-size: 1.4em;
+    }
+
+    .main-header,
+    .main-nav,
+    .row {
+        display: flex;
+    }
+
+    .main-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col {
+        flex: 1;
+    }
+
+    .primary {
+        flex: 1.5;
+    }
+}
+
+@media (min-width: 1025px) {
+    .main-header,
+    .row {
+        /*width: 80%;*/
+        /*max-width: 1150px;*/
+    }
+
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .primary {
+        flex: 2;
+    }
+
+    .wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .unorder li {
+        max-width: 50%;
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+
+    .col {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
