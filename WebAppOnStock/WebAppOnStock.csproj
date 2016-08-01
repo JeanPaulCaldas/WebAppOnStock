@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WebAppOnStock</RootNamespace>
     <AssemblyName>WebAppOnStock</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,30 +49,31 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="categoria.aspx" />
     <Content Include="css\normalize.css" />
     <Content Include="css\style.css" />
     <Content Include="default.aspx" />
     <Content Include="Images\OnStock_BlueLogo.png" />
     <Content Include="Images\OnStock_GreenLogo.png" />
     <Content Include="Images\OnStock_LogoIndustrial.png" />
+    <Content Include="listacategorias.aspx" />
     <Content Include="packages.config" />
     <Content Include="OnStock.Master" />
     <None Include="Scripts\jquery-3.0.0.intellisense.js" />
@@ -97,6 +99,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="categoria.aspx.cs">
+      <DependentUpon>categoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="categoria.aspx.designer.cs">
+      <DependentUpon>categoria.aspx</DependentUpon>
+    </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -113,6 +122,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listacategorias.aspx.cs">
+      <DependentUpon>listacategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listacategorias.aspx.designer.cs">
+      <DependentUpon>listacategorias.aspx</DependentUpon>
     </Compile>
     <Compile Include="OnStock.Master.cs">
       <DependentUpon>OnStock.Master</DependentUpon>
