@@ -31,6 +31,8 @@
             })
         })
     </script>
+    <div id="dvModal" style="display:none;margin:0 auto;position:absolute;background-color:#fff;" class="centerDv"></div>
+    <div class="fondoTransparente" style="display:none"></div>    
     <header class="main-header">
         <div>
             <a href="default.aspx">
@@ -52,7 +54,7 @@
                     <li>
                         <h3><span class="icon-tasks"></span>Inventario</h3>
                         <ul>
-                            <li><a href="#">Nuevo Producto</a></li>
+                            <li><a href="listacategorias.aspx">Categorías</a></li>
                             <li><a href="#">Listado de Productos</a></li>
                             <li><a href="#">Stock Actual</a></li>
                             <li><a href="#">Historial Movimientos</a></li>

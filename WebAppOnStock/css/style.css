@@ -369,3 +369,40 @@ input[type="submit"] {
         padding-left: 0;
     }
 }
+
+.fondoTransparente
+{
+	/*Div que ocupa toda la pantalla*/
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;	
+        height: auto !important;
+	background-color:#000000;
+	/*IE*/
+	filter: alpha(opacity=70);
+	/*FireFox Opera*/
+	opacity: .7;
+	z-index:1;
+        min-height: 100%;        
+}
+
+.centerDv
+{
+    position: absolute;
+    /*nos posicionamos en el centro del navegador*/
+    /*top:50%;
+    left:50%;*/
+    /*determinamos una anchura*/
+    /*width:400px;*/
+    /*indicamos que el margen izquierdo, es la mitad de la anchura*/
+    /*margin-left:-200px;*/
+    /*determinamos una altura*/
+    /*height:300px;*/
+    /*indicamos que el margen superior, es la mitad de la altura*/
+    /*margin-top:-150px;*/
+    /*border:1px solid #808080;*/
+    padding:5px;                   
+    z-index:2;	
+    /*background-color: #ffffff;*/
+}
